@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from datetime import date
 from flask import Flask, abort, render_template, redirect, url_for, flash, request
 from flask_bootstrap import Bootstrap5
@@ -10,11 +12,10 @@ from sqlalchemy import Integer, String, Text
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
-import os
 # Optional: add contact me email functionality (Day 60)
 # import smtplib
 
-
+load_dotenv()
 '''
 Make sure the required packages are installed: 
 Open the Terminal in PyCharm (bottom left). 
